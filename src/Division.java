@@ -19,11 +19,18 @@ class Division {
 
 			System.out.println("Result = " + result);
 		}
-		catch (Exception e)
+		catch (ArithmeticException e)
 		{
-			if(b == 0)
-				System.out.println("The second integer cannot be Zero");
+			//if(b == 0)
+			System.out.println(e.getMessage());
 		}
-		input.close();
+
+		finally 
+		{
+			System.out.println("finally block will execute.");
+			input.close();
+		}
+		
+		
 	}
 }
